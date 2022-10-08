@@ -1,0 +1,15 @@
+.cart{
+    position: sticky;
+    top: 0;
+    padding: 30px 20px;
+}
+
+.delete-all{
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+}
