@@ -6,6 +6,10 @@ import Shop from './components/Shop/Shop'
 import Order from './components/Order/Order';
 import Inventory from './components/Inventory/Inventory';
 import { productsAndCart } from './data/productsAndCartLoader';
+import Login from './components/Login/Login';
+import Register from './components/Register/Register';
+import Shipping from './components/Shipping/Shipping';
+import SecretRoute from './privateRoute/SecretRoute';
 function App() {
 const router = createBrowserRouter([
   {
@@ -20,22 +24,34 @@ const router = createBrowserRouter([
       {
         path:'/order',
         loader: () => productsAndCart(),
-        element:<Order></Order>
+        element:<SecretRoute><Order></Order></SecretRoute>
       },
       {
         path:'/inventory',
-        element:<Inventory></Inventory>
+        element:<SecretRoute><Inventory></Inventory></SecretRoute>
       },
       {
         path:'/about',
         element:<About></About>
+      },
+      {
+        path:'/login',
+        element:<Login></Login>
+      },
+      {
+        path:'/register',
+        element:<Register></Register>
+      },
+      {
+        path:'/shipping',
+        element:<SecretRoute><Shipping></Shipping></SecretRoute>
       }
+
     ]
   }
 ])
   return (
     <div>
-      <h3>Hi, sultan</h3>
       <RouterProvider router={router}></RouterProvider>
     </div>
   );

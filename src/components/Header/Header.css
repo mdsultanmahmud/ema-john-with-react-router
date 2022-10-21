@@ -17,3 +17,10 @@
 .header a:hover{
     color: orange;
 }
+.user-container{
+    position: fixed;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+}
