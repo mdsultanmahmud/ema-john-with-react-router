@@ -44,8 +44,8 @@ const Login = () => {
                     <hr />
                    <p style={{textAlign:'center'}}>or</p>
                     <hr />
-                    <button>Continue With Google</button>
                 </form>
+                    <button>Continue With Google</button>
             </div>
         </div>
     );
