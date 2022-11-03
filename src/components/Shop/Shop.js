@@ -19,7 +19,7 @@ const Shop = () => {
     const [currentPage, setCurrentPage] = useState(0)
     const [pageSize, setPageSize] = useState(10)
     useEffect(() => {
-        const url = `http://localhost:5000/products?page=${currentPage}&size=${pageSize}`
+        const url = `https://ema-john-server-jade.vercel.app/products?page=${currentPage}&size=${pageSize}`
         fetch(url)
             .then(res => res.json())
             .then(data => {
@@ -41,7 +41,7 @@ const Shop = () => {
         const storedCart = getStoredCart();
         const savedCart = [];
         const cartProId = Object.keys(storedCart)
-        fetch('http://localhost:5000/productsWithId', {
+        fetch('https://ema-john-server-jade.vercel.app/productsWithId', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
